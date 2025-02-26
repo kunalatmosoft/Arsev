@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle2, CreditCard, LineChart, Lock, HopOff } from "lucide-react"
+import { ArrowRight, CheckCircle2, CreditCard, LineChart, Lock, Wallet } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -11,12 +11,12 @@ export default function Home() {
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
         <div className="container flex h-16 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
-            <HopOff className="h-6 w-6 text-cyan-400" />
+            <Wallet className="h-6 w-6 text-cyan-400" />
             <span>XacVo</span>
           </Link>
           <div className="flex items-center space-x-4">
             <Link className="hidden text-sm hover:text-cyan-400 sm:block" href="/login">
-              Login
+              Iniciar Sesión
             </Link>
             <button className="bg-gradient-to-r from-cyan-400 to-violet-500 text-black hover:from-cyan-500 hover:to-violet-600 rounded-lg px-4 py-2">
   Sign In
@@ -229,7 +229,7 @@ export default function Home() {
       <section className="relative z-10 border-t border-white/10 bg-black py-24">
         <div className="container px-4">
           <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-gradient-to-r from-cyan-950/50 to-violet-950/50 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Let&apos; dive into the Ares</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">¿Listo para Comenzar?</h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi labore esse tempora?
             </p>
@@ -260,16 +260,16 @@ export default function Home() {
       <footer className="border-t border-white/10 bg-black py-8">
         <div className="container flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
-            <HopOff className="h-6 w-6 text-cyan-400" />
+            <Wallet className="h-6 w-6 text-cyan-400" />
             <span className="font-bold">Ares</span>
           </div>
           <p className="text-sm text-gray-400">© {new Date().getFullYear()} Ares. Todos los derechos reservados.</p>
           <div className="flex space-x-6">
             <Link className="text-sm text-gray-400 hover:text-cyan-400" href="#">
-              Privacy
+              Privacidad
             </Link>
             <Link className="text-sm text-gray-400 hover:text-cyan-400" href="#">
-              Terminology
+              Términos
             </Link>
           </div>
         </div>
