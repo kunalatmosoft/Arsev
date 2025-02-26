@@ -427,7 +427,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Get in Touch
             </h2>
-            <p className="mt-4 text-gray-400">We'd love to hear from you</p>
+            <p className="mt-4 text-gray-400">We&apos;d love to hear from you</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -529,7 +529,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
               >
-                <p className="text-gray-400 italic">"{item.testimonial}"</p>
+                <p className="text-gray-400 italic">&apos;{item.testimonial}&apos;</p>
                 <div className="mt-4">
                   <h4 className="text-lg font-bold">{item.name}</h4>
                   <span className="text-sm text-gray-400">{item.role}</span>

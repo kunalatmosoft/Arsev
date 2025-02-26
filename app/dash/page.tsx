@@ -64,7 +64,7 @@ export default function Dashboard() {
               className="border border-gray-300 rounded-lg px-3 py-1 focus:outline-none"
             />
             <img
-              src="/avatar.png"
+              src="https://th.bing.com/th/id/OIP.PL8O0xjXFqATtI3yiIHpTQHaHa?rs=1&pid=ImgDetMain"
               alt="User Avatar"
               className="h-8 w-8 rounded-full"
             />
