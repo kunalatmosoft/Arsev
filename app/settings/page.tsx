@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -40,7 +39,8 @@ export default function Settings() {
 
   const loadUserData = async () => {
     try {
-      const data: { id: string; name?: string; bio?: string; location?: string; website?: string; twitter?: string; github?: string } = await getUser(user!.uid)
+      // Updated type to include null possibility
+      const data: { id: string; name?: string; bio?: string; location?: string; website?: string; twitter?: string; github?: string } | null = await getUser(user!.uid)
       if (!data) {
         throw new Error("User data not found")
       }
@@ -177,4 +177,3 @@ export default function Settings() {
     </div>
   )
 }
-
