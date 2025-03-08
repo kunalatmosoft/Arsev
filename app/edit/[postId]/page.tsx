@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { getPost, updatePost, Post } from "@/lib/db"
+import { getPost, updatePost } from "@/lib/db"
 import { useToast } from "@/hooks/use-toast"
 
 export default function EditPost() {
@@ -20,7 +20,7 @@ export default function EditPost() {
   useEffect(() => {
     const loadPost = async () => {
       try {
-        const data: Post | null = await getPost(params.postId as string)
+        const data: { title?: string; content?: string; tags?: string[]; author: { id: string } | null; id: string; authorId: any } | null = await getPost(params.postId as string)
         if (!data) {
           toast({
             title: "Post not found",
@@ -31,8 +31,8 @@ export default function EditPost() {
           return
         }
         setPostData({
-          title: data.title,
-          content: data.content,
+          title: data.title || "",
+          content: data.content || "",
           tags: data.tags || [],
         })
       } catch (error) {
